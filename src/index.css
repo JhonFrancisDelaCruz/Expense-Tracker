@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/*
+  Design tokens taken from the Figma dashboard.
+  Every --color-* below becomes a Tailwind class automatically,
+  e.g. --color-card  ->  bg-card, text-card, border-card
+*/
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Merriweather", Georgia, serif;
+
+  --color-page: #11161b; /* page background */
+  --color-sidebar: #1b242c; /* sidebar + mobile nav */
+  --color-card: #222c35; /* cards */
+  --color-card-2: #2a353f; /* raised surfaces */
+  --color-line: #33404b; /* borders / dividers */
+  --color-ink: #e9eef1; /* main text */
+  --color-muted: #8c9aa6; /* secondary text */
+
+  --color-sage: #7cc5ae; /* positive / income text */
+  --color-income: #5b9a89; /* income tile */
+  --color-expense: #a85b4c; /* expense tile */
+  --color-danger: #e3766b; /* negative amounts, red alert */
+  --color-gold: #c9a95a; /* income category badge */
+  --color-accent: #eba96a; /* Quick Add button */
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* "Export PDF" uses the browser print dialog, so print a clean page. */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    border-color: #ccc !important;
+  }
+}
