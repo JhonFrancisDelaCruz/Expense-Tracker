@@ -19,7 +19,9 @@ export default function App() {
   const [settings, setSettings] = useLocalStorage("expensepro.settings", DEFAULT_SETTINGS);
 
   // Jump back to the top whenever you switch pages.
-  useEffect(() => window.scrollTo(0, 0), [page]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page]);
 
   // Numbers for the current month, shared by several pages.
   const monthKey = currentMonthKey();
