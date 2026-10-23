@@ -1,6 +1,6 @@
 // Fixed lists used by forms, filters and the budgets page.
 
-export const EXPENSE_CATEGORIES = [
+export const EXPENSE_CATEGORIES = [   
   "Housing",
   "Groceries",
   "Utilities",
