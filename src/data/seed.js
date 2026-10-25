@@ -2,7 +2,7 @@
 // Dates are generated relative to today, so "this month" always has data.
 
 export const DEFAULT_SETTINGS = {
-  name: "Francis D.",
+  name: "Francis",
   currency: "USD",
   monthlyCap: 2500,
   categoryBudgets: {

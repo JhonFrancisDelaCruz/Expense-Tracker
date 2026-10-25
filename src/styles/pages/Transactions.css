@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Transactions Page Stylesheet
+   ========================================================================== */
+
+.transactions-page {
+  animation: pageFadeIn 0.25s ease-out;
+}
+
+/* Transactions main container */
+.transactions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Individual transaction item styling */
+.transaction-row-hover {
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.transaction-row-hover:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Toolbar filters and search bar container */
+.transactions-filter-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media print {
+  .transactions-page {
+    padding: 0;
+  }
+}

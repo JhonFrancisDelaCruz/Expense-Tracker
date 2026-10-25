@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* 
+  Global Design Tokens & Theme Configuration
+  These custom CSS variables are exposed to Tailwind utilities.
+*/
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Merriweather", Georgia, serif;
+
+  --color-page: #030303;      /* Main page background */
+  --color-sidebar: #090909;   /* Sidebar & mobile navigation background */
+  --color-card: #070707;      /* Base card background */
+  --color-card-2: #111111;    /* Raised surface background */
+  --color-line: #222222;      /* Borders and subtle dividers */
+  --color-ink: #eeeeee;       /* Primary text color */
+  --color-muted: #858585;     /* Secondary / muted text color */
+
+  --color-sage: #7cc5ae;      /* Positive balance / income accent */
+  --color-income: #397a67;    /* Income card background tile */
+  --color-expense: #8c4037;   /* Expense card background tile */
+  --color-danger: #e3766b;    /* Danger / over-budget alert */
+  --color-gold: #b99a50;      /* Income category badge */
+  --color-accent: #eba96a;    /* Primary call-to-action button */
+}
+
+/* Base HTML & Body Settings */
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom smooth transitions for interactive elements */
+button, input, select {
+  transition: all 0.15s ease-in-out;
+}
+
+/* Global scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* Clean printing styles (used by Export PDF / Print feature) */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000000 !important;
+    border-color: #fefefe !important;
+    box-shadow: none !important;
+  }
+}

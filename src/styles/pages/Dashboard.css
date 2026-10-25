@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Dashboard Page Stylesheet
+   ========================================================================== */
+
+.dashboard-page {
+  animation: pageFadeIn 0.25s ease-out;
+}
+
+/* 2-column top cards grid (Balance + Monthly Budget Cap) */
+.dashboard-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .dashboard-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Recent transactions section */
+.dashboard-transactions-section {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .dashboard-transactions-section {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Page fade-in entrance keyframe */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

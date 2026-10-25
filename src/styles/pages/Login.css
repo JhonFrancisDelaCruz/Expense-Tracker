@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Login Page Stylesheet
+   ========================================================================== */
+
+.login-page {
+  display: flex;
+  min-height: calc(100vh - 8rem);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  animation: pageFadeIn 0.3s ease-out;
+}
+
+/* Card container for login form */
+.login-card {
+  width: 100%;
+  max-width: 26rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-line);
+  background-color: var(--color-card);
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-ink);
+}
+
+.login-subtitle {
+  margin-top: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.login-btn-submit {
+  display: inline-flex;
+  height: 2.5rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: var(--color-accent);
+  color: var(--color-page);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: filter 0.15s ease, transform 0.1s ease;
+}
+
+.login-btn-submit:hover {
+  filter: brightness(1.1);
+}
+
+.login-btn-submit:active {
+  transform: scale(0.99);
+}
+
+.login-footer {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}

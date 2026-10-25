@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Budgets Page Stylesheet
+   ========================================================================== */
+
+.budgets-page {
+  animation: pageFadeIn 0.25s ease-out;
+}
+
+/* Overall monthly cap and overview */
+.budgets-summary-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .budgets-summary-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .budgets-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Responsive grid for category budget cards (1 col phone -> 2 cols tablet -> 3 cols desktop) */
+.category-budgets-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .category-budgets-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .category-budgets-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Progress bar container and animated fill */
+.budget-progress-track {
+  position: relative;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.budget-progress-bar {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
