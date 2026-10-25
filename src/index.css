@@ -9,20 +9,20 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --font-serif: "Merriweather", Georgia, serif;
 
-  --color-page: #11161b; /* page background */
-  --color-sidebar: #1b242c; /* sidebar + mobile nav */
-  --color-card: #222c35; /* cards */
-  --color-card-2: #2a353f; /* raised surfaces */
-  --color-line: #33404b; /* borders / dividers */
-  --color-ink: #e9eef1; /* main text */
-  --color-muted: #8c9aa6; /* secondary text */
+  --color-page: #030303; /* page background */
+  --color-sidebar: #090909; /* sidebar + mobile nav */
+  --color-card: #070707; /* cards */
+  --color-card-2: #111111; /* raised surfaces */
+  --color-line: #222222; /* borders / dividers */
+  --color-ink: #EEEEEE; /* main text */
+  --color-muted: #858585; /* secondary text */
 
-  --color-sage: #7cc5ae; /* positive / income text */
-  --color-income: #5b9a89; /* income tile */
-  --color-expense: #a85b4c; /* expense tile */
-  --color-danger: #e3766b; /* negative amounts, red alert */
-  --color-gold: #c9a95a; /* income category badge */
-  --color-accent: #eba96a; /* Quick Add button */
+  --color-sage: #7CC5AE; /* positive / income text */
+  --color-income: #397A67; /* income tile */
+  --color-expense: #8C4037; /* expense tile */
+  --color-danger: #E3766B; /* negative amounts, red alert */
+  --color-gold: #B99A50; /* income category badge */
+  --color-accent: #EBA96A; /* Quick Add button */
 }
 
 html {
@@ -41,7 +41,7 @@ body {
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: #000000 !important;
     border-color: #ccc !important;
   }
 }
