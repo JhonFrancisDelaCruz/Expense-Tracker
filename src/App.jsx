@@ -38,6 +38,19 @@ export default function App() {
   const updateSettings = (changes) => setSettings((s) => ({ ...s, ...changes }));
   const closeModal = useCallback(() => setModalOpen(false), []);
 
+  const theme = settings.theme ?? "system"; // old saved settings have no theme yet
+
+useEffect(() => {
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  const apply = () => {
+    const resolved = theme === "system" ? (mq.matches ? "dark" : "light") : theme;
+    document.documentElement.dataset.theme = resolved;
+  };
+  apply();
+  mq.addEventListener("change", apply); // follows the OS while on "System"
+  return () => mq.removeEventListener("change", apply);
+}, [theme]);
+
   const pages = {
     dashboard: (
       <Dashboard summary={summary} transactions={transactions} currency={settings.currency} />

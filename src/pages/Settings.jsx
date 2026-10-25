@@ -4,7 +4,13 @@ import Field from "../components/Field";
 import { inputClass } from "../components/formStyles";
 import { CURRENCIES } from "../data/categories";
 
-// Profile name, currency and data reset. Single column, capped at a
+const THEMES = [
+  { id: "system", label: "System" },
+  { id: "light", label: "Light" },
+  { id: "dark", label: "Dark" },
+];
+
+// Profile name, currency, theme and data reset. Single column, capped at a
 // comfortable reading width on large screens.
 export default function Settings({ settings, onUpdateSettings, onResetSample, onClearAll }) {
   return (
@@ -39,6 +45,29 @@ export default function Settings({ settings, onUpdateSettings, onResetSample, on
           </div>
         </Card>
 
+        <Card title="Appearance">
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Theme">
+            {THEMES.map((t) => {
+              const active = (settings.theme ?? "system") === t.id;
+              return (
+                <button
+                  key={t.id}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => onUpdateSettings({ theme: t.id })}
+                  className={`h-10 rounded-lg border px-4 text-sm transition-colors ${
+                    active
+                      ? "border-accent bg-accent/10 text-ink"
+                      : "border-line text-muted hover:bg-ink/5"
+                  }`}
+                >
+                  {t.label}
+                </button>
+              );
+            })}
+          </div>
+        </Card>
+
         <Card title="Your data">
           <p className="mb-4 text-sm text-muted">
             Everything is saved in this browser only. Nothing is sent to a server.
@@ -47,7 +76,7 @@ export default function Settings({ settings, onUpdateSettings, onResetSample, on
             <button
               type="button"
               onClick={() => window.confirm("Replace your data with the sample data?") && onResetSample()}
-              className="h-10 rounded-lg border border-line px-4 text-sm hover:bg-white/5"
+              className="h-10 rounded-lg border border-line px-4 text-sm hover:bg-ink/5"
             >
               Load sample data
             </button>

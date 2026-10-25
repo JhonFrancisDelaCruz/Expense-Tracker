@@ -25,6 +25,7 @@
   --color-accent: #EBA96A; /* Quick Add button */
 }
 
+
 html {
   color-scheme: dark;
 }
@@ -44,4 +45,18 @@ body {
     color: #000000 !important;
     border-color: #ccc !important;
   }
+}
+
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --color-page: #f6f7f9;
+  --color-sidebar: #ffffff;
+  --color-card: #ffffff;
+  --color-card-2: #eef0f3;
+  --color-line: #dfe3e8;
+  --color-ink: #11161b;
+  --color-muted: #667085;
+  --color-sage: #2f8f78;   /* darker so it's readable on white */
+  --color-danger: #c9483c;
 }
