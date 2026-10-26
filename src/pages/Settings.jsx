@@ -12,7 +12,13 @@ const THEMES = [
 
 // Profile name, currency, theme and data reset. Single column, capped at a
 // comfortable reading width on large screens.
-export default function Settings({ settings, onUpdateSettings, onResetSample, onClearAll }) {
+export default function Settings({
+  settings,
+  onUpdateSettings,
+  onResetSample,
+  onClearAll,
+  onLogout,
+}) {
   return (
     <div className="space-y-4 sm:space-y-6">
       <PageTitle title="Settings" />
@@ -75,19 +81,36 @@ export default function Settings({ settings, onUpdateSettings, onResetSample, on
           <div className="flex flex-col gap-2 sm:flex-row">
             <button
               type="button"
-              onClick={() => window.confirm("Replace your data with the sample data?") && onResetSample()}
+              onClick={() =>
+                window.confirm("Replace your data with the sample data?") && onResetSample()
+              }
               className="h-10 rounded-lg border border-line px-4 text-sm hover:bg-ink/5"
             >
               Load sample data
             </button>
             <button
               type="button"
-              onClick={() => window.confirm("Delete all transactions? This cannot be undone.") && onClearAll()}
+              onClick={() =>
+                window.confirm("Delete all transactions? This cannot be undone.") && onClearAll()
+              }
               className="h-10 rounded-lg border border-danger/50 px-4 text-sm text-danger hover:bg-danger/10"
             >
               Delete all transactions
             </button>
           </div>
+        </Card>
+
+        <Card title="Account">
+          <p className="mb-4 text-sm text-muted">
+            Sign out and return to the home page. Your data stays saved in this browser.
+          </p>
+          <button
+            type="button"
+            onClick={onLogout}
+            className="h-10 rounded-lg border border-line px-4 text-sm hover:bg-ink/5"
+          >
+            Logout
+          </button>
         </Card>
       </div>
     </div>

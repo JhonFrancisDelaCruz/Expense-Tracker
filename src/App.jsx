@@ -80,17 +80,18 @@ export default function App() {
       />
     ),
     settings: (
-      <Settings
-        settings={settings}
-        onUpdateSettings={updateSettings}
-        onResetSample={() => setTransactions(makeSeed())}
-        onClearAll={() => setTransactions([])}
-      />
-    ),
+  <Settings
+    settings={settings}
+    onUpdateSettings={updateSettings}
+    onResetSample={() => setTransactions(makeSeed())}
+    onClearAll={() => setTransactions([])}
+    onLogout={() => setPage("home")}
+  />
+),
   };
 
-  // Home is a full-width landing page, so it renders without sidebar/header.
-  // This must stay AFTER all hooks above.
+
+
   if (page === "home") {
     return <Home onGetStarted={() => setPage("dashboard")} />;
   }
