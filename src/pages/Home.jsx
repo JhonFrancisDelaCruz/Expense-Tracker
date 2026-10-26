@@ -5,7 +5,7 @@ export default function Home({ onGetStarted }) {
     <div>
       <HeroSection />
 
-      <div className="motto flex min-h-[100vh] flex-col items-center justify-start space-y-4 bg-gradient-to-b from-black via-black to-white px-6 pt-24 text-center">
+      <div className="motto flex min-h-dvh flex-col items-center justify-start space-y-4 bg-gradient-to-b from-black via-black to-white px-6 pt-24 text-center">
         <p className="text-sm font-medium tracking-[0.2em] text-teal-500">
           YOUR MONEY. YOUR CONTROL.
         </p>
@@ -40,7 +40,7 @@ export default function Home({ onGetStarted }) {
       </div>
 
       <section>
-        <div className="min-h-[100vh] bg-white"></div>
+        <div className="min-h-dvh bg-white"></div>
       </section>
     </div>
   );
