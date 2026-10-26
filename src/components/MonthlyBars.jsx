@@ -1,11 +1,6 @@
 import { formatMoney } from "../utils/format";
-
-// Income vs expense bar chart built from plain divs (no chart library).
-// Because it uses flexbox + percentage heights instead of a fixed-width
-// canvas, it shrinks cleanly to a 375px phone screen and its labels stay readable.
 export default function MonthlyBars({ months, currency }) {
   const max = Math.max(1, ...months.flatMap((m) => [m.income, m.expense]));
-
   return (
     <div>
       <div className="mb-4 flex gap-4 text-xs text-muted">

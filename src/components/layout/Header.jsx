@@ -1,8 +1,5 @@
 import Icon, { Logo } from "../common/Icons";
 
-// Top bar: greeting on the left, gift / bell / Quick Add on the right.
-// On phones the logo appears here (the sidebar is hidden) and the
-// Quick Add button shrinks to just a "+" icon.
 export default function Header({ name, onQuickAdd, budgetAlert }) {
   const iconButton =
     "relative grid size-9 shrink-0 place-items-center rounded-lg text-muted transition-colors hover:bg-white/5 hover:text-ink";

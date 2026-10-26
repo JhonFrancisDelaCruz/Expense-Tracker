@@ -1,9 +1,6 @@
 import Icon, { Logo } from "./Icons";
 import { NAV_ITEMS } from "../data/categories";
 
-// Desktop + tablet navigation. Hidden on phones (MobileNav replaces it).
-//   md  (768px+)  : narrow icon-only rail
-//   lg  (1024px+) : full sidebar with text labels
 export default function Sidebar({ page, onNavigate }) {
   return (
     <aside className="sticky top-0 hidden h-dvh w-16 shrink-0 flex-col border-r border-line bg-sidebar p-3 md:flex lg:w-56 lg:p-4 xl:w-64 print:hidden">
@@ -35,6 +32,18 @@ export default function Sidebar({ page, onNavigate }) {
           );
         })}
       </nav>
+
+      {/* Logout, pinned to the bottom */}
+      <button
+        type="button"
+        title="Logout"
+        aria-label="Logout"
+        onClick={() => onNavigate("home")}
+        className="mt-auto flex items-center justify-center gap-3 rounded-lg px-3 py-2.5 text-sm text-muted transition-colors hover:bg-white/5 hover:text-ink lg:justify-start"
+      >
+        <Icon name="logout" className="size-5 shrink-0" />
+        <span className="hidden lg:inline">Logout</span>
+      </button>
     </aside>
   );
 }

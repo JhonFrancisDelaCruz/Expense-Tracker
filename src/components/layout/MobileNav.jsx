@@ -1,8 +1,6 @@
 import Icon from "../common/Icons";
 import { NAV_ITEMS } from "../../data/categories";
 
-// Phone navigation: the sidebar becomes a bottom tab bar (hidden from 768px up).
-// Five tabs fit comfortably even at 320px wide.
 export default function MobileNav({ page, onNavigate }) {
   return (
     <nav

@@ -1,4 +1,4 @@
-// The big page heading ("Dashboard", "Budgets", ...).
+
 export default function PageTitle({ title, subtitle }) {
   return (
     <div className="pt-1">

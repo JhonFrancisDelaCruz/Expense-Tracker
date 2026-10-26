@@ -1,9 +1,3 @@
-// ============================================================================
-// Components Barrel Export
-// Provides convenient unified imports for all components across the app.
-// Example: import { Card, Header, BalanceCard } from "./components";
-// ============================================================================
-
 // Common / UI Primitives
 export { default as Card } from "./common/Card";
 export { default as Field } from "./common/Field";

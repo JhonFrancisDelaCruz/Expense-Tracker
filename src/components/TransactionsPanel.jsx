@@ -7,13 +7,6 @@ import { formatDate, formatMoney } from "../utils/format";
 import { downloadCsv } from "../utils/exportCsv";
 import { EXPENSE_CATEGORIES, INCOME_CATEGORIES } from "../data/categories";
 
-// Transactions card used on the Dashboard (limit = 5) and the
-// Transactions page (all rows + delete buttons).
-//
-// Responsive idea:
-//   phones  (< 768px)  : each transaction is a stacked "row card", no table
-//   tablet  (768px+)   : real table, Payment Method column hidden to save room
-//   desktop (1024px+)  : full table with every column
 export default function TransactionsPanel({
   title = "Recent Transactions",
   transactions,
