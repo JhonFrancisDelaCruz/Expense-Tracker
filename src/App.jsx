@@ -90,8 +90,6 @@ export default function App() {
 ),
   };
 
-
-
   if (page === "home") {
     return <Home onGetStarted={() => setPage("dashboard")} />;
   }
